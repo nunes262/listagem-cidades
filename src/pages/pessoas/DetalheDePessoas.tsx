@@ -3,7 +3,9 @@ import { FerramentasDeDetalhe } from '../../shared/components';
 import { LayoutBase } from '../../shared/layouts';
 import { LinearProgress } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { Form } from '@unform/web';
 import { PessoasService } from '../../shared/services/api/pessoas/PessoasService';
+import { VTextField } from '../../shared/forms';
 
 export const DetalheDePessoas: React.FC = () => {
   const { id = 'nova' } = useParams<'id'>();
@@ -67,12 +69,10 @@ export const DetalheDePessoas: React.FC = () => {
         />
       }
     >
-
-      {isLoading && (
-        <LinearProgress variant='indeterminate' />
-      )}
-
-      <p>DetalheDePessoas {id}</p>
+      <Form onSubmit={(dados) => console.log(dados)}>
+        <VTextField name='nomeCompleto' />
+        <button type='submit'>Submit</button>
+      </Form>
     </LayoutBase>
   );
 };
