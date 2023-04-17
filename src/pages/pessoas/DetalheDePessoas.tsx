@@ -150,17 +150,6 @@ export const DetalheDePessoas: React.FC = () => {
                 />
               </Grid>
             </Grid>
-
-            <Grid container item direction="row" spacing={2}>
-              <Grid item xs={12} sm={12} md={6} lg={4} xl={2}>
-                <VTextField
-                  fullWidth
-                  label='Cidade'
-                  name='cidadeId'
-                  disabled={isLoading}
-                />
-              </Grid>
-            </Grid>
           </Grid>
         </Box>
       </VForm>
