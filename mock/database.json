@@ -80,9 +80,9 @@
     },
     {
       "id": 15,
-      "cidadeId": 1,
+      "nomeCompleto": "Maria Lídia",
       "email": "Maria@gmail.com",
-      "nomeCompleto": "Maria Lydia"
+      "cidadeId": 1
     },
     {
       "id": 16,
