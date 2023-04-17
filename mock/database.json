@@ -32,9 +32,9 @@
     },
     {
       "id": 7,
-      "cidadeId": 1,
+      "nomeCompleto": "Phelipe Freire",
       "email": "Phelipe@gmail.com",
-      "nomeCompleto": "Phelipe Freire"
+      "cidadeId": 1
     },
     {
       "id": 8,
@@ -95,6 +95,16 @@
       "cidadeId": 1,
       "email": "Peixe@gmail.com",
       "nomeCompleto": "Paulo Peixe"
+    }
+  ],
+  "cidades": [
+    {
+      "nome": "Porto Alegre",
+      "id": 1
+    },
+    {
+      "nome": "Belo Horizonte",
+      "id": 2
     }
   ]
 }
