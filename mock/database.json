@@ -105,6 +105,30 @@
     {
       "nome": "Belo Horizonte",
       "id": 2
+    },
+    {
+      "nome": "Novo Hamburgo",
+      "id": 2
+    },
+    {
+      "nome": "Taquara",
+      "id": 3
+    },
+    {
+      "nome": "Palmitinho",
+      "id": 4
+    },
+    {
+      "nome": "Caxias",
+      "id": 5
+    },
+    {
+      "nome": "Sapucaia do Sul",
+      "id": 6
+    },
+    {
+      "nome": "Tramandaí",
+      "id": 7
     }
   ]
 }
