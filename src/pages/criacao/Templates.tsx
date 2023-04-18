@@ -65,7 +65,10 @@ export const Template = () => {
   return (
     <main>
       <div ref={containerRef} className="container">
-        <div ref={boxRef} className="box"></div>
+        <div ref={boxRef} className="box">
+          <p className="text"> top: {cordenadas.current.lastY}</p>
+          <p className="text"> left: {cordenadas.current.lastX}</p>
+        </div>
       </div>
     </main>
   )
