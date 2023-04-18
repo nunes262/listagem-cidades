@@ -42,7 +42,7 @@ export const Dashboard = () => {
 
     return (
         <LayoutBase
-            titulo='Página inicial'
+            titulo='Home Page'
             barraDeFerramentas={<FerramentasDeDetalhe mostrarBotaoNovo={false} />}
         >
             <Box width='100%' display='flex'>

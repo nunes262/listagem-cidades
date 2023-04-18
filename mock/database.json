@@ -2,9 +2,9 @@
   "pessoas": [
     {
       "id": 1,
-      "cidadeId": 1,
+      "nomeCompleto": "Nuneca",
       "email": "Nunes@gmail.com",
-      "nomeCompleto": "Pedro Nunes"
+      "cidadeId": 1
     },
     {
       "id": 2,
@@ -95,6 +95,12 @@
       "cidadeId": 1,
       "email": "Peixe@gmail.com",
       "nomeCompleto": "Paulo Peixe"
+    },
+    {
+      "nomeCompleto": "hellen",
+      "email": "hellen@gmail.com",
+      "cidadeId": 2,
+      "id": 18
     }
   ],
   "cidades": [
@@ -129,6 +135,10 @@
     {
       "nome": "Tramandaí",
       "id": 7
+    },
+    {
+      "nome": "contagem",
+      "id": 8
     }
   ]
 }
