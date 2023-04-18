@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import './Template.css';
+import { Box, Card, Typography } from "@mui/material";
 
 export const Template = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -64,12 +65,12 @@ export const Template = () => {
 
   return (
     <main>
-      <div ref={containerRef} className="container">
-        <div ref={boxRef} className="box">
-          <p className="text"> top: {cordenadas.current.lastY}</p>
-          <p className="text"> left: {cordenadas.current.lastX}</p>
-        </div>
-      </div>
+      <Box ref={containerRef} className="container">
+        <Card ref={boxRef} className="box">
+          <Typography className="text"> top: {cordenadas.current.lastY}</Typography>
+          <Typography className="text"> left: {cordenadas.current.lastX}</Typography>
+        </Card>
+      </Box>
     </main>
   )
 }
