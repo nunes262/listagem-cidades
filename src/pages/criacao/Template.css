@@ -2,7 +2,6 @@
 .container {
   position: relative;
   height: 810px;
-  width: 99%;
   overflow: hidden;
   gap: 5%;
 }
