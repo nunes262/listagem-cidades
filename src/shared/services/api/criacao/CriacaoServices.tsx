@@ -1,28 +1,29 @@
 import { Environment } from "../../../environment";
 import { Api } from "../axios-config";
 
-export interface IListagemCidade {
+export interface IListagemCriacao {
   id: number;
-  nome: string;
+  x: number;
+  y: number;
 }
 
-export interface IDetalheCidade {
+export interface IDetalheCriacao {
   id: number;
-  nome: string;
+  x: number;
+  y: number;
 }
 
-type TCidadesComTotalCount = {
-  data: IListagemCidade[];
+type TCriacaoComTotalCount = {
+  data: IListagemCriacao[];
   totalCount: number;
 };
 
 const getAll = async (
   page = 1,
   filter = ""
-): Promise<TCidadesComTotalCount | Error> => {
+): Promise<TCriacaoComTotalCount | Error> => {
   try {
-    const urlRelativa = `/cidades?_page=${page}&_limit=${Environment.LIMITE_DE_LINHAS}&nome_like=${filter}`;
-
+    const urlRelativa = `/create?_page=${page}&_limit=${Environment.LIMITE_DE_LINHAS}&nomeCompleto_like=${filter}`;
     const { data, headers } = await Api.get(urlRelativa);
 
     if (data) {
@@ -34,18 +35,18 @@ const getAll = async (
       };
     }
 
-    return new Error("Erro ao listar os registros.");
+    return new Error("Erro ao listar os registros."); /*  */
   } catch (error) {
-    console.error(error);
+    /*  console.error(error); */
     return new Error(
       (error as { message: string }).message || "Erro ao listar os registros."
     );
   }
 };
 
-const getById = async (id: number): Promise<IDetalheCidade | Error> => {
+const getById = async (id: number): Promise<IDetalheCriacao | Error> => {
   try {
-    const { data } = await Api.get(`/cidades/${id}`);
+    const { data } = await Api.get(`/create/${id}`);
 
     if (data) {
       return data;
@@ -61,15 +62,14 @@ const getById = async (id: number): Promise<IDetalheCidade | Error> => {
 };
 
 const create = async (
-  dados: Omit<IDetalheCidade, "id">
+  dados: Omit<IDetalheCriacao, "id">
 ): Promise<number | Error> => {
   try {
-    const { data } = await Api.post<IDetalheCidade>("/cidades", dados);
+    const { data } = await Api.post<IDetalheCriacao>("/create", dados);
 
     if (data) {
       return data.id;
     }
-
     return new Error("Erro ao criar o registro.");
   } catch (error) {
     console.error(error);
@@ -81,10 +81,10 @@ const create = async (
 
 const updateById = async (
   id: number,
-  dados: IDetalheCidade
+  dados: IDetalheCriacao
 ): Promise<void | Error> => {
   try {
-    await Api.put(`/cidades/${id}`, dados);
+    await Api.put(`/create/${id}`, dados);
   } catch (error) {
     console.error(error);
     return new Error(
@@ -95,7 +95,7 @@ const updateById = async (
 
 const deleteById = async (id: number): Promise<void | Error> => {
   try {
-    await Api.delete(`/cidades/${id}`);
+    await Api.delete(`/create/${id}`);
   } catch (error) {
     console.error(error);
     return new Error(
@@ -104,7 +104,7 @@ const deleteById = async (id: number): Promise<void | Error> => {
   }
 };
 
-export const CidadesService = {
+export const CriacaoService = {
   getAll,
   create,
   getById,

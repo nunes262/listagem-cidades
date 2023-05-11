@@ -108,6 +108,7 @@ export const DetalheDePessoas: React.FC = () => {
   };
 
   const handleDelete = (id: number) => {
+    // eslint-disable-next-line no-restricted-globals
     if (confirm('Realmente deseja apagar?')) {
       PessoasService.deleteById(id)
         .then(result => {
